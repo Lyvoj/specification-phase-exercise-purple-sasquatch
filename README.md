@@ -8,12 +8,78 @@ See instructions. Delete this line and replace with a list of the names of your 
 
 ## Review of the Current Application
 
-See instructions. Delete this line and replace with your team's findings from using the live app at https://theslidemachine.com — at least 10 specific observations, each labeled as a strength, a weakness, or a gap, and drawn from more than one team member's use of the app.
+1. **Strength — Spoken mathematical expressions are recognized accurately.**  
+   During testing with mathematical expressions and Fourier-transform terminology, Slide Machine converted orally described formulas into readable mathematical notation.  
+   **Observed in:** (https://theslidemachine.com/d/untitled-f33dde17)  
+
+2. **Strength — Spoken descriptions of plots can be converted into generated visualizations.**  
+   Across multiple trials, the presenter described plots verbally and Slide Machine generated corresponding plot visuals rather than limiting the output to text. This behavior was observed more than once, indicating that the system can interpret some spoken quantitative relationships and represent them visually.  
+   **Observed in:**  
+   - [Trial 1](https://theslidemachine.com/d/untitled-7f6f21cf)  
+   - [Trial 2](https://theslidemachine.com/d/untitled-29d9be49)  
+
+3. **Strength — The generated exit-ticket quiz can closely reflect the lecture content.**  
+   In one trial, the quiz generated from the lecture produced clear questions that matched the material covered in the generated deck, showing that the post-lecture quiz workflow can create a useful assessment from the lecture content.  
+   **Observed in:** (https://theslidemachine.com/d/untitled-38535455)  
+   **Quiz:** (https://docs.google.com/forms/d/e/1FAIpQLSezT_elEfOEK4csWcESoTvbmaEW3_zskjtXY5espOhSVLZIug/viewform)  
+
+4. **Strength — Verbal corrections are reflected in the generated slide content.**  
+   In one trial, the presenter intentionally stated an incorrect value and then corrected it verbally. Slide Machine reflected the corrected information rather than preserving only the original mistake, showing that it can respond appropriately to spoken self-corrections.  
+   **Observed in:** (https://theslidemachine.com/d/untitled-ad83c51c)
+
+5. **Strength — Clear topic transitions are recognized and separated appropriately.**  
+   In one trial, the presenter moved from one unrelated topic to another, and Slide Machine handled the transition well by keeping the topics organized rather than blending them into the same slide content.  
+   **Observed in:** (https://theslidemachine.com/d/untitled-7416ce41)
+
+6. **Weakness — Seeded images are not always used when explicitly referenced during a lecture.**  
+   In one test, an image of a matrix had already been uploaded as seed material, but when the presenter referred to the matrix while speaking, the generated slide did not use the uploaded image.  
+   **Observed in:** (https://theslidemachine.com/d/untitled-38535455) 
+   
+
+
+7. **Weakness — Generated plots can have poor visual readability.**  
+   Although Slide Machine successfully generated plots from spoken descriptions, the resulting plots in multiple trials used dark visual styling that made axis labels, annotations, or other text difficult to read.  
+   **Observed in:**  
+   - [Trial 1](https://theslidemachine.com/d/untitled-7f6f21cf)  
+   - [Trial 2](https://theslidemachine.com/d/untitled-29d9be49)  
+
+
+8. **Weakness — Some generated decks contain blank or nearly blank slides during generation.**  
+   In multiple trials, Slide Machine produced slides with little or no visible content before later AI refinement improved the deck. Even if the content is eventually corrected, the temporary blank slides can make the live presentation feel incomplete or confusing while the lecture is still in progress.  
+   **Observed in:**  
+   - [Trial 1](https://theslidemachine.com/d/untitled-d0b1ef47)  
+   - [Trial 2](https://theslidemachine.com/d/untitled-29d9be49)
+
+9. **Weakness — A generated lecture may not include an introductory or title slide.**  
+   In one trial, the generated deck began without a clear front/title slide, so the presentation opened directly into lecture content instead of first establishing the topic or lecture context.  
+   **Observed in:** (https://theslidemachine.com/d/untitled-d0b1ef47)  
+
+10. **Gap — Concept slides do not always include supporting visuals or process diagrams when those would help explain the topic.**  
+   In a concept-based lecture such as one explaining photosynthesis, the generated slide may present the topic in text form without adding a relevant illustrative image or a simple visual overview of the process.  
+   **Observed in:** (https://theslidemachine.com/d/untitled-7416ce41)
+
 
 ## Prior Art & Originality
 
-See instructions. Delete this line and replace with a short statement of what your team checked (the project's Future Work and Open Questions, its roadmap, and its open issues and pull requests) and which parts of your proposal are original — new work not already specified, scheduled, or proposed by someone else.
+Before committing to our proposal, our team reviewed the existing Slide Machine documentation and development activity identified in the project background materials. We have checked the Future Work and Open Questions sections, the delivery roadmap, and the repository's open issues and pull requests. 
+ 
+The purpose of this review was to determine whether our proposed onboarding and tutorial functionality had already been specified, scheduled, or proposed.
 
+We initially considered ideas such as improved mathematical formula support, but found that mathematical content and LaTeX rendering are already supported. We also found that features such as whiteboard annotation, voice interaction, preflight lecture preparation, template versioning, editing, sharing, translation, and quiz-related functionality are already implemented, specified, or planned.
+
+We searched the repository for existing proposals related to tutorials, onboarding, walkthroughs, getting started, help, and first-time users. At the time of our review, we did not find an existing issue or pull request proposing the same guided first-time onboarding experience as our prototype.
+
+Our proposed original contribution is a first-time onboarding and tutorial experience that introduces new users to the main Slide Machine workflow and remains accessible later as reusable help content.
+
+So the prototype has two tuotorial paths:
+
+**an Instructor Guide**, focused on learning how to prepare projects, seed lecture material, deliver a live lecture, review generated slides, share the resulting deck, and work with the exit-ticket quiz; and
+
+**a Student Guide**, focused on learning how to access shared lecture material, navigate generated decks, use available viewing features, and locate the exit-ticket quiz.
+
+The tutorial is intended to appear during the first-time-user experience while also remaining accessible later from the application so that users can revisit the guidance when needed.
+
+This proposal does not introduce a replacement workflow or duplicate existing Slide Machine functionality. Its purpose is to make the application's existing features easier for first-time students and instructors to discover and understand.
 ## Stakeholders
 
 See instructions. Delete this line and replace with the name(s) of the stakeholder(s) you interviewed and lists showing their goals/needs, and problems/frustrations. Note which type of user each stakeholder represents. You may use pseudonyms or partial names to maintain their privacy, but you must privately share their full names and contact information as part of your submission of this exercise
