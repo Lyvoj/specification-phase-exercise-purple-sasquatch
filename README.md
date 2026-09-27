@@ -28,11 +28,87 @@ See instructions. Delete this line and place a list of your User Stories here, g
 
 ## Activity Diagrams
 
-See instructions. Delete this line and place images of your UML Activity diagrams here, each with the text of the user story it illustrates.
+The four activity diagrams describe interactive tutorials for existing Slide Machine features: recording and quiz creation for instructors, and translation and narration for students. Role selection organizes tutorial content without changing account permissions.
+
+**Notation:** solid routes follow the reviewed prototype; dashed routes show proposed entry or recovery behavior. **Back to Tutorials** returns to Instructor / Student selection, using the team's agreed completion-button wording.
+
+### Recording tutorial
+
+<!-- Requirements lead: insert the matching final User Story text and reference here. -->
+
+![Guided recording activity diagram](images/activity-diagrams/01-recording.png)
+
+Start recording, stop, review the slides, and complete the tutorial. Canceling the stop confirmation returns to recording.
+
+### Quiz tutorial
+
+<!-- Requirements lead: insert the matching final User Story text and reference here. -->
+
+![Guided quiz creation activity diagram](images/activity-diagrams/02-quiz.png)
+
+Set up a quiz, follow the simulated connection steps, review questions, and publish. In the exit-confirmation dialog, **Exit** returns to the tutorial home and **Cancel** returns to Quiz Type, matching the reviewed prototype.
+
+### Translation tutorial
+
+<!-- Requirements lead: insert the matching final User Story text and reference here. -->
+
+![Guided translation activity diagram](images/activity-diagrams/03-translation.png)
+
+Select Spanish, view the translated slide, and switch back to Original English. The proposed failure path keeps the original content and offers retry or return to the tutorial home.
+
+### Narration tutorial
+
+<!-- Requirements lead: insert the matching final User Story text and reference here. -->
+
+![Guided narration activity diagram](images/activity-diagrams/04-narration.png)
+
+Play, pause, resume, and finish the narration tutorial. The stop confirmation lets the user continue playback or return to the tutorial home without completing the tutorial.
 
 ## Wireframes
 
-See instructions. Delete this line and place your wireframe diagrams here, covering every new screen and every existing screen your proposal changes, for every type of user.
+The seven grayscale sheets show tutorial pages and dialogs grouped by task. They are simplified redraws based on the team's Figma, with shared layouts shown once. Dashed outlines identify proposed additions.
+
+### Common pages
+
+![Common tutorial wireframes](images/wireframes/01-common.png)
+
+The proposed application entry leads to role selection and the relevant tutorial list. All four completion pages use **Back to Tutorials** to return to role selection.
+
+### Recording tutorial
+
+![Recording tutorial wireframes](images/wireframes/02-recording.png)
+
+Start recording, view recording status, confirm stopping, and review generated slides.
+
+### Quiz setup
+
+![Quiz setup wireframes](images/wireframes/03-quiz-setup.png)
+
+Open quiz settings, choose a quiz type, connect to Google Forms, and select a folder. Connection is simulated; no real authorization is performed.
+
+### Quiz publishing and exit
+
+![Quiz publishing and exit wireframes](images/wireframes/04-quiz-publish.png)
+
+Review questions, publish, view the result, or confirm exit. Questions and the link are placeholders; Edit and Copy Link behavior were not verified.
+
+### Translation tutorial
+
+![Translation tutorial wireframes](images/wireframes/05-translation.png)
+
+Open the language menu, select Spanish, view the translation, and restore Original English.
+
+### Narration tutorial
+
+![Narration tutorial wireframes](images/wireframes/06-narration.png)
+
+Start playback, pause, resume, and confirm stopping.
+
+### Help and proposed recovery
+
+![Help and proposed recovery wireframes](images/wireframes/07-help-recovery.png)
+
+Help returns to the first step of the relevant tutorial, except Quiz Help, which returns to Quiz Type. The proposed recovery dialog offers **Retry** when retrying is possible, or **Back to Tutorials** without marking the tutorial complete; existing lecture content is preserved.
 
 ## Clickable Prototype
 
