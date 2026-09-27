@@ -10,10 +10,30 @@ See instructions. Delete this line and replace with a list of the names of your 
 
 See instructions. Delete this line and replace with your team's findings from using the live app at https://theslidemachine.com — at least 10 specific observations, each labeled as a strength, a weakness, or a gap, and drawn from more than one team member's use of the app.
 
+
+
+
 ## Prior Art & Originality
 
-See instructions. Delete this line and replace with a short statement of what your team checked (the project's Future Work and Open Questions, its roadmap, and its open issues and pull requests) and which parts of your proposal are original — new work not already specified, scheduled, or proposed by someone else.
+Before committing to our proposal, our team reviewed the existing Slide Machine documentation and development activity identified in the project background materials. We have checked the Future Work and Open Questions sections, the delivery roadmap, and the repository's open issues and pull requests. 
+ 
+The purpose of this review was to determine whether our proposed onboarding and tutorial functionality had already been specified, scheduled, or proposed.
 
+We initially considered ideas such as improved mathematical formula support, but found that mathematical content and LaTeX rendering are already supported. We also found that features such as whiteboard annotation, voice interaction, preflight lecture preparation, template versioning, editing, sharing, translation, and quiz-related functionality are already implemented, specified, or planned.
+
+We searched the repository for existing proposals related to tutorials, onboarding, walkthroughs, getting started, help, and first-time users. At the time of our review, we did not find an existing issue or pull request proposing the same guided first-time onboarding experience as our prototype.
+
+Our proposed original contribution is a first-time onboarding and tutorial experience that introduces new users to the main Slide Machine workflow and remains accessible later as reusable help content.
+
+So the prototype has two tuotorial paths:
+
+**an Instructor Guide**, focused on learning how to prepare projects, seed lecture material, deliver a live lecture, review generated slides, share the resulting deck, and work with the exit-ticket quiz; and
+
+**a Student Guide**, focused on learning how to access shared lecture material, navigate generated decks, use available viewing features, and locate the exit-ticket quiz.
+
+The tutorial is intended to appear during the first-time-user experience while also remaining accessible later from the application so that users can revisit the guidance when needed.
+
+This proposal does not introduce a replacement workflow or duplicate existing Slide Machine functionality. Its purpose is to make the application's existing features easier for first-time students and instructors to discover and understand.
 ## Stakeholders
 
 See instructions. Delete this line and replace with the name(s) of the stakeholder(s) you interviewed and lists showing their goals/needs, and problems/frustrations. Note which type of user each stakeholder represents. You may use pseudonyms or partial names to maintain their privacy, but you must privately share their full names and contact information as part of your submission of this exercise
