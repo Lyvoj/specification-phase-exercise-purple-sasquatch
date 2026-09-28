@@ -183,7 +183,9 @@ Help returns to the first step of the relevant tutorial, except Quiz Help, which
 
 ## Clickable Prototype
 
-See instructions. Delete this line and place a publicly-accessible link to your clickable prototype here.
+[Open the Slide Machine Tutorials clickable prototype in Figma](https://www.figma.com/proto/SroFcNH2UkFln43ed1xbZZ/Purple-Sasquatch-%E2%80%94-Slide-Machine-Tutorials-Clickable-Prototype?node-id=3-2&starting-point-node-id=3%3A2)
+
+Choose **Instructor** to explore the recording and quiz tutorials, or **Student** to explore the translation and narration tutorials. Follow the highlighted controls and arrow prompts; **Back to Tutorials** returns to the role-selection page.
 
 ## Stakeholder Demo
 
