@@ -38,10 +38,11 @@ See instructions. Delete this line and replace with a list of the names of your 
 
 
 7. **Weakness — Generated plots can have poor visual readability.**  
-   Although Slide Machine successfully generated plots from spoken descriptions, the resulting plots in multiple trials used dark visual styling that made axis labels, annotations, or other text difficult to read.  
+   Although Slide Machine successfully generated plots from spoken descriptions, the resulting plots in multiple trials used dark visual styling that made axis labels, annotations, or other text difficult to read. The generated figures also consistently included gray bands above and below the plot, reducing the amount of slide space available for the visualization and making the figure appear smaller.
    **Observed in:**  
    - [Trial 1](https://theslidemachine.com/d/untitled-7f6f21cf)  
    - [Trial 2](https://theslidemachine.com/d/untitled-29d9be49)  
+   - [Trial 3](https://theslidemachine.com/d/untitled-e0f37daa) 
 
 
 8. **Weakness — Some generated decks contain blank or nearly blank slides during generation.**  
@@ -54,7 +55,11 @@ See instructions. Delete this line and replace with a list of the names of your 
    In one trial, the generated deck began without a clear front/title slide, so the presentation opened directly into lecture content instead of first establishing the topic or lecture context.  
    **Observed in:** (https://theslidemachine.com/d/untitled-d0b1ef47)  
 
-10. **Gap — Concept slides do not always include supporting visuals or process diagrams when those would help explain the topic.**  
+10. **Weakness — Changing the slide design can reduce formula readability.**  
+After switching the slide design, the mathematical formula became oversized and partially cut off, so the full expression was no longer visible.  
+**Observed in:** [Design-change formula trial](https://theslidemachine.com/d/untitled-2aadc2e4)
+
+11. **Gap — Concept slides do not always include supporting visuals or process diagrams when those would help explain the topic.**  
    In a concept-based lecture such as one explaining photosynthesis, the generated slide may present the topic in text form without adding a relevant illustrative image or a simple visual overview of the process.  
    **Observed in:** (https://theslidemachine.com/d/untitled-7416ce41)
 
