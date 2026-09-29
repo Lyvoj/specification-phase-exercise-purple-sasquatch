@@ -474,9 +474,9 @@ The lecture page and shared deck use the proposed **Tutorials** item in the exis
 
 ![Shared Tutorial Portal wireframe](images/wireframes/02-shared-tutorial-portal.png)
 
-A single list offers **Record a Lecture**, **Generate and Publish a Quiz**, **Translate Slides**, and **Listen to Narration**. **Start** opens the selected topic at Step 1, including when replaying it. **Back to application** returns to the application context from which the Portal was opened.
+A single list offers **Record a Lecture**, **Generate and Publish a Quiz**, **Translate Slides**, **Listen to Narration**, and **Insert a New Slide**. The **Search tutorials** field lets users find a topic in the list. **Start** opens the selected topic at Step 1, including when replaying it. **Back to application** returns to the application context from which the Portal was opened.
 
-Adding a topic such as “Insert a New Slide” means adding another list item and its steps, using the same guide layout.
+**Insert a New Slide** is included as another tutorial entry to demonstrate extensibility. Additional topics use the same list-item format and guide layout, with their own instructional steps.
 
 ### 3. Instructor guide examples
 
