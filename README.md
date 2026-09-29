@@ -459,11 +459,59 @@ remain outside the scope of this proposal.
 
 ## Product Vision Statement
 
-See instructions. Delete this line and place your Product Vision Statement here — one sentence describing the improvements and new features your team is proposing for The Slide Machine.
+The Slide Machine will provide a shared, reusable Tutorial Portal with optional 
+first-use onboarding, searchable task-based guidance, highlighted step-by-step 
+instructions, and consistent completion, exit, and replay controls to help 
+students review lecture materials independently and instructors prepare and 
+check teaching materials with greater confidence.
 
 ## User Requirements
 
-See instructions. Delete this line and place a list of your User Stories here, grouped by type of user. These should describe functionality that is new or changed, not functionality the app already has.
+### Students
+
+1. As a student, I want a short first-use prompt that lets me start tutorials or
+choose Not now and stay on the current page, so that I can decide when to learn 
+the application without delaying my participation in class.
+
+2. As a student, I want to reopen the same Tutorial Portal through Help > Tutorials after my first visit, so that I can get guidance whenever I forget how to use a feature.
+
+3. As a student, I want to browse task-based categories and clearly described topics in a shared Tutorial Portal, so that I can identify tutorials relevant to lecture viewing and review without first selecting a user role.
+
+4. As a student, I want to search the Tutorial Portal for a task or feature, so that I can quickly find the instructions I need while studying.
+
+5. As a student, I want guided instructions for selecting a translation language and restoring the original lecture content, so that I can compare wording and check unfamiliar technical terms.
+
+6. As a student, I want guided instructions for starting, pausing, and resuming narration, so that I can learn to control audio playback during independent lecture review.
+
+7. As a student, I want each tutorial step to show a short instruction, a highlighted target, and my progress while letting me advance with Next, so that I can learn the controls at my own pace.
+
+8. As a student, I want a completion message identifying the tutorial I finished and a Back to Tutorials action, so that I can recognize the end of the guide and return to the shared topic list.
+
+9. As a student, I want to use the same Tutorial Portal to restart a completed or interrupted tutorial from Step 1 or choose a different topic, so that I can revisit forgotten instructions and decide what to learn next.
+
+10. As a student, I want an exit confirmation that explains the tutorial will remain incomplete and lets me continue at the current step or return to the Portal without changing my lecture content, so that I can interrupt the guide without losing my study material.
+
+### Instructors
+
+1. As an instructor, I want a short first-use prompt that lets me start tutorials or postpone them with Not now, so that I can choose whether to learn the application before continuing my teaching work.
+
+2. As an instructor, I want a permanent Help > Tutorials entry that opens the same Tutorial Portal from my current workspace, so that I can consult guidance for an unfamiliar or infrequently used task.
+
+3. As an instructor, I want to search the Tutorial Portal using a task or problem description, so that I can find relevant instructions quickly during a time-sensitive preparation or review task.
+
+4. As an instructor, I want to browse task-based categories and see tutorial suggestions relevant to my current application context, so that I can choose useful guidance without following unrelated topics or selecting a user role.
+
+5. As an instructor, I want to follow a selected tutorial through short instructions, highlighted controls, and visible step progress until I choose Finish, so that I can learn a teaching workflow while keeping my lecture material visible.
+
+6. As an instructor, I want recording guidance that explains seed materials, starting and stopping a live session, and reviewing the generated slides, so that I can understand the preparation and review needed before sharing lecture material.
+
+7. As an instructor, I want quiz guidance that explains generating questions, reviewing them, and publishing the quiz, so that I can understand how to prepare an exit-ticket activity and check its suitability before distribution.
+
+8. As an instructor, I want an exit confirmation explaining that an unfinished tutorial will restart at Step 1, with options to continue at the current step or exit to the Portal without changing lecture content, so that I can make an informed decision about interrupting the guide.
+
+9. As an instructor, I want guidance on recognizing processing and failure states and using available editing or slide-replacement actions for unsuitable output, so that I can respond to incomplete or unreadable material before sharing it.
+
+10. As an instructor, I want different and newly added tutorial topics to use the same guide layout and controls, so that I can learn additional features through a familiar process.
 
 ## Activity Diagrams
 
