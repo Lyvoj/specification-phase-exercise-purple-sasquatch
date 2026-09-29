@@ -76,11 +76,21 @@ We searched the repository for existing proposals related to tutorials, onboardi
 
 Our proposed original contribution is a first-time onboarding and tutorial experience that introduces new users to the main Slide Machine workflow and remains accessible later as reusable help content.
 
-So the prototype has two tuotorial paths:
+The proposed system introduces a shared **Tutorial Portal** that can be opened either during a user's first visit or later through the Help menu. The portal contains task-based tutorial topics such as "Record a lecture," "Generate a quiz," "Translate slides," and "Listen to slides."
 
-**an Instructor Guide**, focused on learning how to prepare projects, seed lecture material, deliver a live lecture, review generated slides, share the resulting deck, and work with the exit-ticket quiz; and
+All tutorial topics reuse the same interaction pattern:
+1. Select a tutorial from the shared portal.
+2. Display a guided overlay on top of the existing application.
+3. Highlight or point to the relevant interface control.
+4. Show the current step and instructions.
+5. Allow the user to continue, finish, or exit.
+6. Return the user to the same tutorial portal after completion or exit.
 
-**a Student Guide**, focused on learning how to access shared lecture material, navigate generated decks, use available viewing features, and locate the exit-ticket quiz.
+The main original contribution is therefore not any one tutorial topic, but the **reusable tutorial framework**. New tutorials can be added using the same portal, guide layout, progress behavior, highlighting system, and completion/exit flow without creating a separate interface for every feature.
+
+For example, a future tutorial such as "Insert a new slide" could be added as another portal item while reusing the same tutorial pattern.
+
+The instructor and student scenarios in our user stories describe who may benefit from particular tutorials; they do not represent separate tutorial systems or separate role-selection interfaces.
 
 The tutorial is intended to appear during the first-time-user experience while also remaining accessible later from the application so that users can revisit the guidance when needed.
 
