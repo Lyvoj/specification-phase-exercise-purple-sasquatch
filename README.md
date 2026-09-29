@@ -90,26 +90,35 @@ This proposal does not introduce a replacement workflow or duplicate existing Sl
 
 ### Interview Method and Privacy
 
-We interviewed and observed four people representing the two primary user
-types affected by our proposal: two instructor-type users and two student-type
-users. The interviews were conducted on **September 26, 2026**, using a
-**hybrid** format.
+We interviewed and observed four people representing the two user types that
+must be included in the current specification: two instructor-type users and
+two student-type users. The interviews were conducted on **September 26,
+2026**, using a **hybrid** format.
 
 Each participant was asked about their lecture-related goals, needs, and
 frustrations. We also observed each participant attempting relevant tasks in
 the live Slide Machine application. After the observation, we explained our
-proposed reusable, role-specific tutorial system and asked how they would want
-to access and use that guidance.
+proposed reusable, task-based tutorial system and asked how they would want to
+access and use that guidance.
 
 The public names below use each participant's first name and last initial to
 protect their privacy. Their full names and email addresses will be shared
 privately with the course administrators for verification and will not be
 published in this repository.
 
-Our proposal is a reusable, role-specific onboarding and tutorial system. It
-does **not** include an AI assistant. First-login onboarding, tutorial
-categories, tutorial search, and a persistent tutorial entry are proposed
-additions rather than features of the current application.
+Our proposal uses one shared Tutorial Portal rather than requiring users to
+select a role before receiving help. Tutorials are organized through search,
+task-based categories, and contextually relevant recommendations. First-login
+onboarding, tutorial search, task categories, and a persistent tutorial entry
+are proposed additions rather than features of the current application. The
+proposal does **not** include an AI assistant.
+
+The current stakeholder research focuses on the two required user types:
+instructors/authors and students/viewers. Because the tutorial structure is
+task-based and reusable, it could also support workplace presenters and other
+authors in the future without requiring a separate interaction model. Those
+future audiences are not treated as additional stakeholder types in the
+current specification.
 
 ### Annie Q. — First-Time Instructor
 
@@ -161,11 +170,12 @@ an unfamiliar workflow could interrupt a live lesson.
 
 #### Response to the Proposed Tutorial System
 
-Annie Q. wanted a short, skippable getting-started tutorial that explains
-the overall instructor workflow. On a first visit, they preferred a recommended
-sequence or browsable overview. For later visits, they preferred searching for
-a specific task, such as publishing a quiz. They also wanted tutorials to
-remain accessible after the first login.
+Annie Q. wanted a short, skippable getting-started tutorial that explains the
+overall instructor workflow. On a first visit, they preferred a recommended
+sequence or browsable overview within the shared Tutorial Portal. For later
+visits, they preferred searching the same Portal for a specific task, such as
+publishing a quiz. They also wanted tutorials to remain accessible after the
+first login.
 
 ### Alice L. — Assistant Teacher with AI-Assisted Material Experience
 
@@ -219,10 +229,11 @@ review and recovery rather than basic introductory instruction.
 
 #### Response to the Proposed Tutorial System
 
-Alice L. would normally skip basic onboarding and search for a specific
-tutorial. They preferred short tutorials such as “Insert a New Slide,” “Review
-Generated Slides,” or “Recover from an Unreadable Slide.” They wanted guidance
-that could be opened and closed without losing the current working context.
+Alice L. would normally skip basic onboarding and search the shared Tutorial
+Portal for a specific tutorial. They preferred short tutorials such as “Insert
+a New Slide,” “Review Generated Slides,” or “Recover from an Unreadable Slide.”
+They wanted guidance that could be opened and closed without losing the current
+working context.
 
 ### Jefferson C. — First-Time Student
 
@@ -231,9 +242,9 @@ that could be opened and closed without losing the current working context.
 
 #### Background
 
-Jefferson C. is an undergraduate student who normally follows the
-instructor's projected slides, opens shared lecture material on a personal
-device, and completes a short quiz near the end of class.
+Jefferson C. is an undergraduate student who normally follows the instructor's
+projected slides, opens shared lecture material on a personal device, and
+completes a short quiz near the end of class.
 
 #### Goals and Needs
 
@@ -271,10 +282,11 @@ device, and completes a short quiz near the end of class.
 
 #### Response to the Proposed Tutorial System
 
-Jefferson C. preferred a short Student getting-started path containing only
-common student tasks. They preferred browsing a small Student category on the
-first visit and wanted the ability to reopen a specific tutorial later, such
-as a narration tutorial during exam review.
+Jefferson C. preferred a short getting-started path containing common student
+tasks. On the first visit, they preferred browsing a clearly labeled **Viewing
+and Student Tasks** category within the shared Tutorial Portal. They also wanted
+the ability to reopen a specific tutorial later, such as a narration tutorial
+during exam review.
 
 ### Zixuan G. — International Student with Language-Support Needs
 
@@ -284,9 +296,9 @@ reviewing lectures
 
 #### Background
 
-Zixuan G. is an international student who sometimes needs to review
-lecture material more than once or use translation support to understand
-unfamiliar technical terms.
+Zixuan G. is an international student who sometimes needs to review lecture
+material more than once or use translation support to understand unfamiliar
+technical terms.
 
 #### Goals and Needs
 
@@ -325,8 +337,8 @@ unfamiliar technical terms.
 
 #### Response to the Proposed Tutorial System
 
-Zixuan G. preferred a searchable Student tutorial catalog with a small
-language and viewing category. They wanted task-specific tutorials such as
+Zixuan G. preferred a searchable **Viewing and Accessibility** category within
+the shared Tutorial Portal. They wanted task-specific tutorials such as
 “Translate a Slide,” “Return to the Original Language,” and “Start and Pause
 Narration.” They also wanted these tutorials to remain available from the deck
 after the first login.
@@ -337,14 +349,13 @@ after the first login.
 
 First-time users could understand the general purpose of Slide Machine without
 understanding how projects, preparation, live sessions, generated decks, and
-quizzes fit together. Annie Q. hesitated at seed materials and did not
-naturally continue from recording to deck review and quiz generation.
-Jefferson C. initially understood the application primarily as a slide-viewing
-website.
+quizzes fit together. Annie Q. hesitated at seed materials and did not naturally
+continue from recording to deck review and quiz generation. Jefferson C.
+initially understood the application primarily as a slide-viewing website.
 
-**Design implication:** Provide short, role-specific getting-started paths that
-explain the overall sequence without requiring users to learn every feature at
-once.
+**Design implication:** Provide short, contextually relevant getting-started
+paths that lead into the same shared Tutorial Portal without requiring users to
+learn every feature at once.
 
 #### Finding 2 — Important existing features are not always discoverable
 
@@ -352,18 +363,24 @@ The instructor did not immediately understand seed materials or the
 post-recording workflow. Student participants did not immediately discover
 translation, narration, or quiz access without additional guidance.
 
-**Design implication:** Organize tutorials by role and task, and introduce the
-most important features during a short first-login experience.
+**Design implication:** Organize the shared Portal by searchable task
+categories, and recommend the most relevant topics during a short first-login
+experience based on the user's current application context.
 
-#### Finding 3 — Instructor and student guidance must be separated
+#### Finding 3 — Different users need different topics but can share one Portal
 
 Instructors need guidance about preparation, live sessions, generated content,
-editing, and quizzes. Students need guidance about shared decks, quizzes,
-translation, narration, and other viewing features. Combining both groups into
-one undifferentiated tutorial would expose users to irrelevant instructions.
+editing, and quizzes. Students need guidance about shared decks, quiz access,
+translation, narration, and other viewing features. A single undifferentiated
+list would expose users to irrelevant instructions, but separate tutorial
+systems would duplicate the same navigation and interaction structure.
 
-**Design implication:** Provide separate Instructor and Student tutorial
-catalogs while using the same underlying tutorial structure.
+**Design implication:** Use one shared Tutorial Portal with search, task-based
+categories, and contextually recommended topics. Users should not be required
+to select a role before accessing tutorials. Categories such as **Getting
+Started**, **Creating and Presenting**, **Assessment**, and **Viewing and
+Accessibility** can organize content without limiting the system to specific
+roles.
 
 #### Finding 4 — Users need clearer status and recovery guidance
 
@@ -378,13 +395,13 @@ do when a result is incomplete or unsuitable.
 
 #### Finding 5 — First-time and experienced users need different ways to access help
 
-First-time users preferred a short recommended path or a small browsable
-catalog. The experienced participant preferred direct search for a known task
-or problem.
+First-time users preferred a short recommended path or a small browsable set of
+topics. The experienced participant preferred direct search for a known task or
+problem.
 
-**Design implication:** Support both browsing and search. Onboarding should be
-optional and skippable, while individual tutorials should remain searchable
-later.
+**Design implication:** Support both browsing and search within the same
+Portal. Onboarding should be optional and skippable, while individual tutorials
+should remain searchable later.
 
 #### Finding 6 — Tutorials must be available after the first login
 
@@ -392,8 +409,8 @@ Participants expected that they might forget infrequent tasks, encounter a new
 feature, or need guidance while reviewing a lecture later.
 
 **Design implication:** Do not limit tutorials to the first-login experience.
-Provide a persistent way to reopen the tutorial catalog from the user's current
-workflow.
+Provide a persistent way to reopen the shared Tutorial Portal from the user's
+current workflow.
 
 #### Finding 7 — Guidance should preserve the user's current context
 
@@ -406,21 +423,29 @@ from the relevant screen and closed without losing the user's place.
 
 #### Finding 8 — The tutorial system must be reusable and extensible
 
-The set of relevant help topics will grow as Slide Machine adds features and as
-users encounter new tasks. Building a separate navigation pattern for every
-tutorial would not scale.
+The set of relevant tutorial topics will grow as Slide Machine adds features
+and serves additional presentation contexts. Building separate navigation for
+every topic or audience would not scale.
 
 **Design implication:** Use one shared catalog and tutorial-runner structure.
 Adding a topic such as “Insert a New Slide” should require adding a new tutorial
-item and its steps, not redesigning the overall interaction.
+item, assigning it to the appropriate task category, and supplying its steps;
+it should not require redesigning the overall interaction. The same structure
+can accommodate future audiences, including workplace presenters, without
+adding a mandatory role-selection flow.
 
 ### Scope Decision
+
+Our current specification focuses on the two required and researched user
+types: instructors/authors and students/viewers. The proposed Tutorial Portal is
+intentionally broad enough to support additional audiences, such as workplace
+presenters, but those audiences are not treated as separate stakeholder types
+in this iteration because they were not part of the current stakeholder sample.
 
 Our proposal focuses on onboarding, feature discovery, and reusable
 step-by-step tutorials. Requests for new application capabilities, such as
 additional narration-speed controls, are valuable stakeholder findings but
 remain outside the scope of this proposal.
-
 
 ## Product Vision Statement
 
