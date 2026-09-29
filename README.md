@@ -170,7 +170,7 @@ remain accessible after the first login.
 ### Alice L. — Assistant Teacher with AI-Assisted Material Experience
 
 **User type:** Instructor  
-**Experience with Slide Machine:** Familiar with AI-assisted lecture-material
+**Experience with Slide Machine:** Familiar with AI-assisted teaching-material
 workflows
 
 #### Background
