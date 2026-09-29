@@ -432,87 +432,71 @@ See instructions. Delete this line and place a list of your User Stories here, g
 
 ## Activity Diagrams
 
-The four activity diagrams describe interactive tutorials for existing Slide Machine features: recording and quiz creation for instructors, and translation and narration for students. Role selection organizes tutorial content without changing account permissions.
+The tutorial system uses one shared Tutorial Portal. Users can enter from the first-use prompt or Help, choose a topic, follow its steps, and return to the Portal. New topics reuse the same navigation and guidance structure.
 
-**Notation:** solid routes follow the reviewed prototype; dashed routes show proposed entry or recovery behavior. **Back to Tutorials** returns to Instructor / Student selection, using the team's agreed completion-button wording.
+### 1. Enter the Tutorial Portal
 
-### Recording tutorial
+<!-- Requirements lead: add the corresponding final User Story and user type here. -->
 
-<!-- Requirements lead: insert the matching final User Story text and reference here. -->
+![Enter the Tutorial Portal activity diagram](images/activity-diagrams/01-enter-tutorial-portal.png)
 
-![Guided recording activity diagram](images/activity-diagrams/01-recording.png)
+From Projects or a shared deck, first-time users can start tutorials or select **Not now** to stay on the current page. **Help → Tutorials** opens the same Portal later.
 
-Start recording, stop, review the slides, and complete the tutorial. Canceling the stop confirmation returns to recording.
+### 2. Choose and complete a tutorial
 
-### Quiz tutorial
+<!-- Requirements lead: add the corresponding final User Story and user type here. -->
 
-<!-- Requirements lead: insert the matching final User Story text and reference here. -->
+![Choose and complete a tutorial activity diagram](images/activity-diagrams/02-choose-and-complete.png)
 
-![Guided quiz creation activity diagram](images/activity-diagrams/02-quiz.png)
+Select a topic and follow its guidance. **Next** advances to the following step. At the last step, **Finish** opens the completion screen; **Back to Tutorials** returns to the Portal.
 
-Set up a quiz, follow the simulated connection steps, review questions, and publish. In the exit-confirmation dialog, **Exit** returns to the tutorial home and **Cancel** returns to Quiz Type, matching the reviewed prototype.
+### 3. Exit a tutorial
 
-### Translation tutorial
+<!-- Requirements lead: add the corresponding final User Story and user type here. -->
 
-<!-- Requirements lead: insert the matching final User Story text and reference here. -->
+![Exit a tutorial activity diagram](images/activity-diagrams/03-exit-tutorial.png)
 
-![Guided translation activity diagram](images/activity-diagrams/03-translation.png)
+**Exit tutorial** opens a confirmation dialog. **Continue tutorial** returns to the current step; **Exit to Tutorials** returns to the Portal without marking the tutorial complete. Lecture content is unchanged.
 
-Select Spanish, view the translated slide, and switch back to Original English. The proposed failure path keeps the original content and offers retry or return to the tutorial home.
+### 4. Replay or switch tutorials
 
-### Narration tutorial
+<!-- Requirements lead: add the corresponding final User Story and user type here. -->
 
-<!-- Requirements lead: insert the matching final User Story text and reference here. -->
+![Replay or switch tutorials activity diagram](images/activity-diagrams/04-replay-or-switch.png)
 
-![Guided narration activity diagram](images/activity-diagrams/04-narration.png)
-
-Play, pause, resume, and finish the narration tutorial. The stop confirmation lets the user continue playback or return to the tutorial home without completing the tutorial.
+From the Portal, choose the same topic to replay it or a different topic to learn something else. Either choice starts at Step 1 and uses the shared tutorial flow.
 
 ## Wireframes
 
-The seven grayscale sheets show tutorial pages and dialogs grouped by task. They are simplified redraws based on the team's Figma, with shared layouts shown once. Dashed outlines identify proposed additions.
+The four grayscale sheets cover the Portal entry, topic list, shared guidance, and completion and exit states. Users choose a topic without a separate role-selection screen.
 
-### Common pages
+### 1. Entry and Help
 
-![Common tutorial wireframes](images/wireframes/01-common.png)
+![First-use prompt and Help entry wireframes](images/wireframes/01-entry-and-help.png)
 
-The proposed application entry leads to role selection and the relevant tutorial list. All four completion pages use **Back to Tutorials** to return to role selection.
+**Start tutorials** opens the Portal. **Not now** dismisses the first-use prompt. **Help → Tutorials** remains available for reopening it.
 
-### Recording tutorial
+### 2. Tutorial Portal
 
-![Recording tutorial wireframes](images/wireframes/02-recording.png)
+![Tutorial Portal wireframe](images/wireframes/02-tutorial-portal.png)
 
-Start recording, view recording status, confirm stopping, and review generated slides.
+A single list offers topics such as recording, quiz generation, translation, and narration. **Start** opens the selected topic at Step 1, including when replaying it. **Back to application** returns to the application context from which the Portal was opened.
 
-### Quiz setup
+Adding a topic such as “Insert a New Slide” means adding another list item and its steps, using the same guide layout.
 
-![Quiz setup wireframes](images/wireframes/03-quiz-setup.png)
+### 3. Shared tutorial guide
 
-Open quiz settings, choose a quiz type, connect to Google Forms, and select a folder. Connection is simulated; no real authorization is performed.
+![Shared tutorial guide wireframes](images/wireframes/03-shared-tutorial-guide.png)
 
-### Quiz publishing and exit
+Each topic uses a title, step counter, short instruction, and highlighted target with an arrow. Ordinary steps offer **Next**; the last step offers **Finish**. **Exit tutorial** is available in both states.
 
-![Quiz publishing and exit wireframes](images/wireframes/04-quiz-publish.png)
+Quiz generation illustrates the shared layout, not a complete topic walkthrough. The application background is schematic; the final prototype should use the actual application's navigation and control locations.
 
-Review questions, publish, view the result, or confirm exit. Questions and the link are placeholders; Edit and Copy Link behavior were not verified.
+### 4. Completion and exit
 
-### Translation tutorial
+![Tutorial completion and exit confirmation wireframes](images/wireframes/04-completion-and-exit.png)
 
-![Translation tutorial wireframes](images/wireframes/05-translation.png)
-
-Open the language menu, select Spanish, view the translation, and restore Original English.
-
-### Narration tutorial
-
-![Narration tutorial wireframes](images/wireframes/06-narration.png)
-
-Start playback, pause, resume, and confirm stopping.
-
-### Help and proposed recovery
-
-![Help and proposed recovery wireframes](images/wireframes/07-help-recovery.png)
-
-Help returns to the first step of the relevant tutorial, except Quiz Help, which returns to Quiz Type. The proposed recovery dialog offers **Retry** when retrying is possible, or **Back to Tutorials** without marking the tutorial complete; existing lecture content is preserved.
+After completion, **Back to Tutorials** returns to the Portal. In the exit dialog, **Continue tutorial** keeps the current step and **Exit to Tutorials** returns to the Portal. Restarting an exited tutorial begins at Step 1. Replaying and switching topics reuse the Portal rather than adding another screen.
 
 ## Clickable Prototype
 
