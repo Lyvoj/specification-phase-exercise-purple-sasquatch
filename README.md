@@ -85,9 +85,342 @@ So the prototype has two tuotorial paths:
 The tutorial is intended to appear during the first-time-user experience while also remaining accessible later from the application so that users can revisit the guidance when needed.
 
 This proposal does not introduce a replacement workflow or duplicate existing Slide Machine functionality. Its purpose is to make the application's existing features easier for first-time students and instructors to discover and understand.
+
 ## Stakeholders
 
-See instructions. Delete this line and replace with the name(s) of the stakeholder(s) you interviewed and lists showing their goals/needs, and problems/frustrations. Note which type of user each stakeholder represents. You may use pseudonyms or partial names to maintain their privacy, but you must privately share their full names and contact information as part of your submission of this exercise
+### Interview Method and Privacy
+
+We interviewed and observed four people representing the two primary user
+types affected by our proposal: two instructor-type users and two student-type
+users. The interviews were conducted on **September 26, 2026**, using a
+**hybrid** format.
+
+Each participant was asked about their lecture-related goals, needs, and
+frustrations. We also observed each participant attempting relevant tasks in
+the live Slide Machine application. After the observation, we explained our
+proposed reusable, role-specific tutorial system and asked how they would want
+to access and use that guidance.
+
+The public names below use each participant's first name and last initial to
+protect their privacy. Their full names and email addresses will be shared
+privately with the course administrators for verification and will not be
+published in this repository.
+
+Our proposal is a reusable, role-specific onboarding and tutorial system. It
+does **not** include an AI assistant. First-login onboarding, tutorial
+categories, tutorial search, and a persistent tutorial entry are proposed
+additions rather than features of the current application.
+
+### Annie Q. — First-Time Instructor
+
+**User type:** Instructor  
+**Experience with Slide Machine:** First-time user
+
+#### Background
+
+Annie Q. is an assistant teacher at a local school who regularly prepares
+PowerPoint slides and other visual materials before class. They were interested
+in using Slide Machine to reduce preparation time, but they were concerned that
+an unfamiliar workflow could interrupt a live lesson.
+
+#### Goals and Needs
+
+- Reduce the time required to prepare lecture slides.
+- Understand what must be prepared before starting a live lecture.
+- Understand the purpose of seed materials and how they affect generation.
+- Know whether Slide Machine is still processing or has encountered an error.
+- Review generated slides before sharing them with students.
+- Generate and publish an exit-ticket quiz after a lecture.
+- Reopen guidance later for tasks that are not performed frequently.
+
+#### Problems and Frustrations
+
+- The relationship between projects, seed materials, live sessions, generated
+  decks, and quizzes was not immediately clear.
+- The participant did not know whether seed materials were required before
+  recording.
+- Blank or incomplete slides made it difficult to determine whether generation
+  was still in progress.
+- The next step after stopping a live session was not obvious.
+- Uncertainty during a live lecture created a risk of disrupting the class.
+- When no guidance was available, the participant relied on trial and error.
+
+#### Observed Behavior
+
+- The participant paused at the seed-material area and asked what it was for.
+- Without additional explanation, the participant skipped the seed-material
+  step and looked for an import control similar to one in conventional
+  presentation software.
+- When a blank slide appeared during generation, the participant moved between
+  the stop, refresh, and other nearby controls and asked whether the system was
+  still processing.
+- After stopping the live session, the participant remained on the current
+  screen and waited for the application to present the next step.
+- Without guidance, the participant did not immediately proceed to deck review
+  or quiz generation.
+
+#### Response to the Proposed Tutorial System
+
+Annie Q. wanted a short, skippable getting-started tutorial that explains
+the overall instructor workflow. On a first visit, they preferred a recommended
+sequence or browsable overview. For later visits, they preferred searching for
+a specific task, such as publishing a quiz. They also wanted tutorials to
+remain accessible after the first login.
+
+### Alice L. — Assistant Teacher with AI-Assisted Material Experience
+
+**User type:** Instructor  
+**Experience with Slide Machine:** Familiar with AI-assisted teaching-material
+workflows
+
+#### Background
+
+Alice L. is an assistant teacher at a local school who has experience using
+AI-assisted tools to prepare lesson materials. They review presentation content
+before it is shown or distributed to students. Their priority is efficient
+review and recovery rather than basic introductory instruction.
+
+#### Goals and Needs
+
+- Review generated slides quickly before they are shared.
+- Identify and correct unreadable formulas, plots, images, or layouts.
+- Add or replace a slide when generated content is unsuitable.
+- Find instructions for a specific task without repeating the entire onboarding
+  flow.
+- Keep the current deck visible while consulting guidance.
+- Learn how to use new functionality after an application update.
+
+#### Problems and Frustrations
+
+- Generated content may require manual review before distribution.
+- The fastest recovery action is not always apparent when generated content is
+  unsuitable.
+- A long general tutorial would slow down a time-sensitive review task.
+- Leaving the current deck to search for help would interrupt the review
+  workflow.
+- Browsing a large set of unrelated tutorials would be inefficient when the
+  user already knows the problem.
+- Guidance that covers only the ideal workflow would not help with recovery
+  from an unsuccessful result.
+
+#### Observed Behavior
+
+- The participant immediately inspected formulas, plots, images, and layout
+  after content was generated.
+- When a displayed item appeared unsuitable, the participant first tried
+  direct editing actions, including double-clicking, right-clicking, and
+  looking for an edit control.
+- When the correct recovery action was unclear, the participant looked for a
+  search entry, documentation, or instructions related to the current task.
+- The participant attempted to keep the current deck visible while looking for
+  guidance.
+- The participant showed greater interest in short, task-specific instructions
+  than in repeating the complete lecture workflow.
+
+#### Response to the Proposed Tutorial System
+
+Alice L. would normally skip basic onboarding and search for a specific
+tutorial. They preferred short tutorials such as “Insert a New Slide,” “Review
+Generated Slides,” or “Recover from an Unreadable Slide.” They wanted guidance
+that could be opened and closed without losing the current working context.
+
+### Jefferson C. — First-Time Student
+
+**User type:** Student  
+**Experience with Slide Machine:** First-time user
+
+#### Background
+
+Jefferson C. is an undergraduate student who normally follows the
+instructor's projected slides, opens shared lecture material on a personal
+device, and completes a short quiz near the end of class.
+
+#### Goals and Needs
+
+- Open the correct shared lecture deck quickly.
+- Understand which Slide Machine features are relevant to students.
+- Locate and complete the exit-ticket quiz on time.
+- Discover viewing features such as translation and narration.
+- Receive guidance that does not include irrelevant instructor workflows.
+- Reopen a tutorial later while reviewing lecture material.
+
+#### Problems and Frustrations
+
+- The participant initially understood Slide Machine mainly as an online slide
+  viewer.
+- Student-facing features were not immediately discoverable without
+  explanation.
+- The location of the exit-ticket quiz was not immediately clear.
+- Missing a quiz or lecture link could affect participation in class.
+- The participant depended on classmates or the instructor when unsure how to
+  continue.
+- Instructor-focused guidance would add irrelevant information and increase
+  cognitive load.
+
+#### Observed Behavior
+
+- After opening a shared deck, the participant focused primarily on the central
+  slide area.
+- Without prompting, the participant did not open the translation or narration
+  controls.
+- When unsure how to access a student-facing feature, the participant looked to
+  another person for guidance rather than finding instructions in the
+  application.
+- While looking for the exit-ticket quiz, the participant checked multiple
+  interface areas before identifying where it could be accessed and submitted.
+
+#### Response to the Proposed Tutorial System
+
+Jefferson C. preferred a short Student getting-started path containing only
+common student tasks. They preferred browsing a small Student category on the
+first visit and wanted the ability to reopen a specific tutorial later, such
+as a narration tutorial during exam review.
+
+### Zixuan G. — International Student with Language-Support Needs
+
+**User type:** Student  
+**Experience with Slide Machine:** Uses translation and playback support when
+reviewing lectures
+
+#### Background
+
+Zixuan G. is an international student who sometimes needs to review
+lecture material more than once or use translation support to understand
+unfamiliar technical terms.
+
+#### Goals and Needs
+
+- Locate translation controls without leaving the lecture deck.
+- View translated lecture material while retaining access to the original
+  content.
+- Return to the original language after viewing a translation.
+- Start, pause, and resume narration during lecture review.
+- Keep the current slide visible while consulting instructions.
+- Reopen language or narration tutorials when a feature has been forgotten.
+
+#### Problems and Frustrations
+
+- Language-related controls were not immediately discoverable.
+- An inaccurate translation could make a technical concept more difficult to
+  understand.
+- Switching between translated and original content was not immediately clear.
+- Narration controls required exploration before the participant understood
+  them.
+- Leaving the lecture deck to search for help would interrupt learning.
+- The participant also wanted finer playback controls; this need is outside the
+  current tutorial-system proposal.
+
+#### Observed Behavior
+
+- The participant examined several interface areas while looking for
+  translation or language controls.
+- After encountering an unnatural translation of a technical term, the
+  participant looked for a way to restore or compare the original text.
+- During narration playback, the participant searched around the playback area
+  for pause, resume, and progress controls.
+- When the expected control was not found, the participant returned to the
+  original lecture material and postponed the task.
+- The participant tried to keep the current lecture content visible while
+  looking for guidance.
+
+#### Response to the Proposed Tutorial System
+
+Zixuan G. preferred a searchable Student tutorial catalog with a small
+language and viewing category. They wanted task-specific tutorials such as
+“Translate a Slide,” “Return to the Original Language,” and “Start and Pause
+Narration.” They also wanted these tutorials to remain available from the deck
+after the first login.
+
+### Synthesized Interview Findings
+
+#### Finding 1 — First-time users lack a clear mental model of the complete workflow
+
+First-time users could understand the general purpose of Slide Machine without
+understanding how projects, preparation, live sessions, generated decks, and
+quizzes fit together. Annie Q. hesitated at seed materials and did not
+naturally continue from recording to deck review and quiz generation.
+Jefferson C. initially understood the application primarily as a slide-viewing
+website.
+
+**Design implication:** Provide short, role-specific getting-started paths that
+explain the overall sequence without requiring users to learn every feature at
+once.
+
+#### Finding 2 — Important existing features are not always discoverable
+
+The instructor did not immediately understand seed materials or the
+post-recording workflow. Student participants did not immediately discover
+translation, narration, or quiz access without additional guidance.
+
+**Design implication:** Organize tutorials by role and task, and introduce the
+most important features during a short first-login experience.
+
+#### Finding 3 — Instructor and student guidance must be separated
+
+Instructors need guidance about preparation, live sessions, generated content,
+editing, and quizzes. Students need guidance about shared decks, quizzes,
+translation, narration, and other viewing features. Combining both groups into
+one undifferentiated tutorial would expose users to irrelevant instructions.
+
+**Design implication:** Provide separate Instructor and Student tutorial
+catalogs while using the same underlying tutorial structure.
+
+#### Finding 4 — Users need clearer status and recovery guidance
+
+Blank or incomplete generated content made it difficult for the first-time
+instructor to determine whether the application was still working. The
+experienced instructor-type participant also needed guidance for recovering
+from unsuitable generated content.
+
+**Design implication:** Tutorials should cover both successful workflows and
+recovery situations, including how to recognize processing states and what to
+do when a result is incomplete or unsuitable.
+
+#### Finding 5 — First-time and experienced users need different ways to access help
+
+First-time users preferred a short recommended path or a small browsable
+catalog. The experienced participant preferred direct search for a known task
+or problem.
+
+**Design implication:** Support both browsing and search. Onboarding should be
+optional and skippable, while individual tutorials should remain searchable
+later.
+
+#### Finding 6 — Tutorials must be available after the first login
+
+Participants expected that they might forget infrequent tasks, encounter a new
+feature, or need guidance while reviewing a lecture later.
+
+**Design implication:** Do not limit tutorials to the first-login experience.
+Provide a persistent way to reopen the tutorial catalog from the user's current
+workflow.
+
+#### Finding 7 — Guidance should preserve the user's current context
+
+Instructor and student participants wanted to keep the current deck or lecture
+visible while looking for instructions. Leaving the current task would increase
+interruption and cognitive load.
+
+**Design implication:** Use concise, dismissible guidance that can be opened
+from the relevant screen and closed without losing the user's place.
+
+#### Finding 8 — The tutorial system must be reusable and extensible
+
+The set of relevant help topics will grow as Slide Machine adds features and as
+users encounter new tasks. Building a separate navigation pattern for every
+tutorial would not scale.
+
+**Design implication:** Use one shared catalog and tutorial-runner structure.
+Adding a topic such as “Insert a New Slide” should require adding a new tutorial
+item and its steps, not redesigning the overall interaction.
+
+### Scope Decision
+
+Our proposal focuses on onboarding, feature discovery, and reusable
+step-by-step tutorials. Requests for new application capabilities, such as
+additional narration-speed controls, are valuable stakeholder findings but
+remain outside the scope of this proposal.
+
 
 ## Product Vision Statement
 
