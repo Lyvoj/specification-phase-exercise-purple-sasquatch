@@ -436,15 +436,11 @@ The tutorial system uses one shared Tutorial Portal. Users can enter from the fi
 
 ### 1. Enter the Tutorial Portal
 
-<!-- Requirements lead: add the corresponding final User Story and user type here. -->
-
 ![Enter the Tutorial Portal activity diagram](images/activity-diagrams/01-enter-tutorial-portal.png)
 
 From Projects or a shared deck, first-time users can start tutorials or select **Not now** to stay on the current page. **Help → Tutorials** opens the same Portal later.
 
 ### 2. Choose and complete a tutorial
-
-<!-- Requirements lead: add the corresponding final User Story and user type here. -->
 
 ![Choose and complete a tutorial activity diagram](images/activity-diagrams/02-choose-and-complete.png)
 
@@ -452,15 +448,11 @@ Select a topic and follow its guidance. **Next** advances to the following step.
 
 ### 3. Exit a tutorial
 
-<!-- Requirements lead: add the corresponding final User Story and user type here. -->
-
 ![Exit a tutorial activity diagram](images/activity-diagrams/03-exit-tutorial.png)
 
 **Exit tutorial** opens a confirmation dialog. **Continue tutorial** returns to the current step; **Exit to Tutorials** returns to the Portal without marking the tutorial complete. Lecture content is unchanged.
 
 ### 4. Replay or switch tutorials
-
-<!-- Requirements lead: add the corresponding final User Story and user type here. -->
 
 ![Replay or switch tutorials activity diagram](images/activity-diagrams/04-replay-or-switch.png)
 
