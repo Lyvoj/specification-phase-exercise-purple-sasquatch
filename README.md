@@ -467,87 +467,71 @@ See instructions. Delete this line and place a list of your User Stories here, g
 
 ## Activity Diagrams
 
-The four activity diagrams describe interactive tutorials for existing Slide Machine features: recording and quiz creation for instructors, and translation and narration for students. Role selection organizes tutorial content without changing account permissions.
+The four diagrams show two instructor scenarios and two student scenarios within one shared Tutorial Portal. User types describe the scenarios; they do not require separate portals or a role-selection screen. Each scenario starts in the application, opens the proposed **Menu → Tutorials** entry, and follows a topic through completion or recovery.
 
-**Notation:** solid routes follow the reviewed prototype; dashed routes show proposed entry or recovery behavior. **Back to Tutorials** returns to Instructor / Student selection, using the team's agreed completion-button wording.
+### 1. Instructor — Record a lecture
 
-### Recording tutorial
+![Instructor recording tutorial activity diagram](images/activity-diagrams/01-instructor-recording.png)
 
-<!-- Requirements lead: insert the matching final User Story text and reference here. -->
+From an existing lecture, choose **Record a Lecture** in the Portal. Follow the guidance to start a live session, speak, stop recording, and review the generated slides. If the session cannot start, show the reason and microphone guidance, then offer a retry or return to the Portal.
 
-![Guided recording activity diagram](images/activity-diagrams/01-recording.png)
+### 2. Instructor — Generate and publish a quiz
 
-Start recording, stop, review the slides, and complete the tutorial. Canceling the stop confirmation returns to recording.
+![Instructor quiz tutorial activity diagram](images/activity-diagrams/02-instructor-quiz.png)
 
-### Quiz tutorial
+From a completed lecture, choose **Generate and Publish a Quiz**. Follow the guidance to generate, review, and publish an exit-ticket quiz. If generation fails, keep the deck available and offer a retry or return to the Portal.
 
-<!-- Requirements lead: insert the matching final User Story text and reference here. -->
+### 3. Student — Translate slides
 
-![Guided quiz creation activity diagram](images/activity-diagrams/02-quiz.png)
+![Student translation tutorial activity diagram](images/activity-diagrams/03-student-translation.png)
 
-Set up a quiz, follow the simulated connection steps, review questions, and publish. In the exit-confirmation dialog, **Exit** returns to the tutorial home and **Cancel** returns to Quiz Type, matching the reviewed prototype.
+From a shared deck, choose **Translate Slides**. Use the language selector, read the translated slides, and return to the original language. If translation fails, keep the original content visible and offer a retry or return to the Portal.
 
-### Translation tutorial
+### 4. Student — Listen to narration
 
-<!-- Requirements lead: insert the matching final User Story text and reference here. -->
+![Student narration tutorial activity diagram](images/activity-diagrams/04-student-narration.png)
 
-![Guided translation activity diagram](images/activity-diagrams/03-translation.png)
+From a shared deck, choose **Listen to Narration**. Open the slide actions and select **Read this slide aloud**, then practice pausing, resuming, and stopping playback. If audio cannot play, keep the slide visible and offer a retry or return to the Portal.
 
-Select Spanish, view the translated slide, and switch back to Original English. The proposed failure path keeps the original content and offers retry or return to the tutorial home.
-
-### Narration tutorial
-
-<!-- Requirements lead: insert the matching final User Story text and reference here. -->
-
-![Guided narration activity diagram](images/activity-diagrams/04-narration.png)
-
-Play, pause, resume, and finish the narration tutorial. The stop confirmation lets the user continue playback or return to the tutorial home without completing the tutorial.
+All four scenarios use **Finish** to open the completion state and **Back to Tutorials** to return to the shared Portal. The common first-use prompt and mid-tutorial exit confirmation are shown in the wireframes below.
 
 ## Wireframes
 
-The seven grayscale sheets show tutorial pages and dialogs grouped by task. They are simplified redraws based on the team's Figma, with shared layouts shown once. Dashed outlines identify proposed additions.
+The five grayscale sheets cover application entry, the shared topic list, instructor and student guide examples, and common completion, exit, and recovery states. Tutorials use the same guide layout across topics.
 
-### Common pages
+### 1. Application entry
 
-![Common tutorial wireframes](images/wireframes/01-common.png)
+![Application entry and first-use prompt wireframes](images/wireframes/01-application-entry.png)
 
-The proposed application entry leads to role selection and the relevant tutorial list. All four completion pages use **Back to Tutorials** to return to role selection.
+The lecture page and shared deck use the proposed **Tutorials** item in the existing application menu. The optional first-use prompt offers **Start tutorials** or **Not now**. Returning users open **Menu → Tutorials** when they need help; the Portal does not open automatically.
 
-### Recording tutorial
+### 2. Tutorial Portal
 
-![Recording tutorial wireframes](images/wireframes/02-recording.png)
+![Shared Tutorial Portal wireframe](images/wireframes/02-shared-tutorial-portal.png)
 
-Start recording, view recording status, confirm stopping, and review generated slides.
+A single list offers **Record a Lecture**, **Generate and Publish a Quiz**, **Translate Slides**, **Listen to Narration**, and **Insert a New Slide**. The **Search tutorials** field lets users find a topic in the list. **Start** opens the selected topic at Step 1, including when replaying it. **Back to application** returns to the application context from which the Portal was opened.
 
-### Quiz setup
+**Insert a New Slide** is included as another tutorial entry to demonstrate extensibility. Additional topics use the same list-item format and guide layout, with their own instructional steps.
 
-![Quiz setup wireframes](images/wireframes/03-quiz-setup.png)
+### 3. Instructor guide examples
 
-Open quiz settings, choose a quiz type, connect to Google Forms, and select a folder. Connection is simulated; no real authorization is performed.
+![Recording and quiz tutorial guide wireframes](images/wireframes/03-instructor-guide-examples.png)
 
-### Quiz publishing and exit
+The recording guide highlights **Live session** in the lecture toolbar. The quiz guide uses **Lecture settings → Quiz**. Both use a topic title, step counter, short instruction, and highlighted target with an arrow. Ordinary steps offer **Next**; the last step offers **Finish**. **Exit tutorial** remains available.
 
-![Quiz publishing and exit wireframes](images/wireframes/04-quiz-publish.png)
+### 4. Student guide examples
 
-Review questions, publish, view the result, or confirm exit. Questions and the link are placeholders; Edit and Copy Link behavior were not verified.
+![Translation and narration tutorial guide wireframes](images/wireframes/04-student-guide-examples.png)
 
-### Translation tutorial
+The translation guide highlights the deck's language selector. The narration guide highlights **Read this slide aloud** in a slide's actions menu. Both reuse the same guidance controls as the instructor examples. These sheets illustrate the shared guide layout rather than every step of each topic.
 
-![Translation tutorial wireframes](images/wireframes/05-translation.png)
+### 5. Completion, exit, and recovery
 
-Open the language menu, select Spanish, view the translation, and restore Original English.
+![Tutorial completion, exit confirmation, and error recovery wireframes](images/wireframes/05-completion-exit-recovery.png)
 
-### Narration tutorial
+After **Finish**, **Back to Tutorials** returns to the Portal. In the exit dialog, **Continue tutorial** keeps the current step and **Exit to Tutorials** returns to the Portal without completing the tutorial. Restarting begins at Step 1.
 
-![Narration tutorial wireframes](images/wireframes/06-narration.png)
-
-Start playback, pause, resume, and confirm stopping.
-
-### Help and proposed recovery
-
-![Help and proposed recovery wireframes](images/wireframes/07-help-recovery.png)
-
-Help returns to the first step of the relevant tutorial, except Quiz Help, which returns to Quiz Type. The proposed recovery dialog offers **Retry** when retrying is possible, or **Back to Tutorials** without marking the tutorial complete; existing lecture content is preserved.
+If an action fails, a recovery message explains the problem. **Retry** repeats the interrupted action; **Return to Portal** leaves the tutorial incomplete. The translation example keeps the original slides visible. Recording, quiz, and narration use the same recovery layout with topic-specific explanations. Replaying or switching topics uses the existing Portal rather than another screen.
 
 ## Clickable Prototype
 
